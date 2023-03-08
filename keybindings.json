@@ -1,0 +1,33 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+shift+enter",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "workbench.action.terminal.runSelectedText"
+    },
+    {
+        "key": "ctrl+shift+6",
+        "command": "workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+numpad_subtract",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.focusActiveEditorGroup"
+    }
+]

@@ -9,5 +9,5 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 ADDREPO
 
-sudo dnf install code
+sudo dnf install code -y
 

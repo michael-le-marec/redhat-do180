@@ -104,3 +104,25 @@ oc logs php-helloworld-2-build -f
 
 curl -s ${RHT_OCP4_DEV_USER}-helloworld-${RHT_OCP4_DEV_USER}-s2i.${RHT_OCP4_WILDCARD_DOMAIN}
 
+
+lab openshift-review start
+
+source /usr/local/etc/ocp4.config
+
+oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+
+oc new-project ${RHT_OCP4_DEV_USER}-ocp
+
+oc new-app php:7.3 --name=temps https://github.com/RedHatTraining/DO180-apps/ --context-dir temps
+
+oc logs -f bc/temps
+
+oc get pods
+oc expose svc/temps
+oc get routes
+
+echo http://temps-${RHT_OCP4_DEV_USER}-ocp.${RHT_OCP4_WILDCARD_DOMAIN}
+
+lab openshift-review grade
+
+lab openshift-review finish

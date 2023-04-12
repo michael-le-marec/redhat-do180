@@ -1,14 +1,14 @@
-# sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-# sudo tee /etc/yum.repos.d/vscode.repo <<ADDREPO
-# [code]
-# name=Visual Studio Code
-# baseurl=https://packages.microsoft.com/yumrepos/vscode
-# enabled=1
-# gpgcheck=1
-# gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-# ADDREPO
+sudo tee /etc/yum.repos.d/vscode.repo <<ADDREPO
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+ADDREPO
 
-# sudo dnf install code -y
+sudo dnf install code -y
 
-cat keybindings.json > ~/.config/VSCodium/User/keybindings.json
+cat keybindings.json > ~/.config/Code/User/keybindings.json
